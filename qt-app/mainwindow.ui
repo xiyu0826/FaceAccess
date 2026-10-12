@@ -98,7 +98,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>门禁记录</string>
+     <string>开锁记录</string>
     </property>
    </widget>
    <widget class="QTableWidget" name="tableWidget_records">
