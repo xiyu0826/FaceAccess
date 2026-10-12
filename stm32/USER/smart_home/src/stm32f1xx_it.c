@@ -76,7 +76,7 @@ void USART3_IRQHandler(void)
     wifi_uart_irq_handler();
 }
 
-/* 门禁串口中断 (USART1, CH340) */
+/* 开锁串口中断 (USART1, CH340) */
 void USART1_IRQHandler(void)
 {
     door_uart_irq_handler();

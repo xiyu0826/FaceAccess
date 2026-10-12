@@ -15,13 +15,13 @@
 #define SERVO_TIM            TIM3
 #define SERVO_CHANNEL        TIM_CHANNEL_4
 
-#define SERVO_ANGLE_CLOSED   0      // 关门角度
-#define SERVO_ANGLE_OPEN     90     // 开门角度
+#define SERVO_ANGLE_CLOSED   0      // 上锁角度
+#define SERVO_ANGLE_OPEN     90     // 开锁角度
 
 void servo_init(void);
 void servo_set_angle(int angle);   // 设置角度 0~180
-void servo_open(void);             // 开门 (90°)
-void servo_close(void);            // 关门 (0°)
+void servo_open(void);             // 开锁 (90°)
+void servo_close(void);            // 上锁 (0°)
 uint32_t servo_get_pulse(void);    // 读取当前 CCR 脉宽值（调试用）
 
 #endif

@@ -9,7 +9,7 @@
 RecordDialog::RecordDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle("门禁记录查询");
+    setWindowTitle("开锁记录查询");
     resize(620, 440);
 
     table = new QTableWidget(this);

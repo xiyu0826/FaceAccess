@@ -57,7 +57,7 @@ static int           g_time_valid = 0;
 static aqi_level_t   g_aqi = AQI_GOOD;
 static light_level_t g_light = LIGHT_NORMAL;
 static uint8_t       g_alarm_flags = 0;
-static uint8_t       g_alarm_enabled = 1;   /* 演示前默认撤防，避免 MQ135 飘高误报警盖过门禁提示音 */
+static uint8_t       g_alarm_enabled = 1;   /* 演示前默认撤防，避免 MQ135 飘高误报警盖过开锁提示音 */
 static uint8_t       g_alarm_muted = 0;
 static int           g_display_dirty = 1;
 static int           g_current_page = PAGE_MAIN;
@@ -382,7 +382,7 @@ int main(void)
     /* 基础外设 */
     uart_debug_init();
     delay_ms(100);
-    door_uart_init();   /* 开启 UART1 中断接收（门禁命令） */
+    door_uart_init();   /* 开启 UART1 中断接收（开锁命令） */
     led_all_init();
     beep_init();
     i2c_scanner_init();

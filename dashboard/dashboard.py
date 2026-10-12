@@ -110,7 +110,7 @@ HTML = """
   <div class="card"><div class="label">人体</div><div class="value pir">{{ pir }}</div></div>
   <div class="card"><div class="label">报警状态</div><div class="value" id="alarm">正常</div></div>
   <div class="card"><div class="label">布防状态</div><div class="value" id="armed">布防</div></div>
-  <div class="card"><div class="label">最近开门</div><div class="value" id="door">-</div></div>
+  <div class="card"><div class="label">最近开锁</div><div class="value" id="door">-</div></div>
 </div>
 
 <div class="ctrl">

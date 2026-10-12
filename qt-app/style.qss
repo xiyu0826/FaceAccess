@@ -1,4 +1,4 @@
-/* 人脸识别门禁 —— 深色科技风主题 */
+/* 人脸保险柜 —— 深色科技风主题 */
 
 QMainWindow {
     background-color: #1a1a2e;
@@ -62,7 +62,7 @@ QComboBox QAbstractItemView {
     selection-background-color: #1a4a8a;
 }
 
-/* 门禁记录表格 */
+/* 开锁记录表格 */
 QTableWidget {
     background-color: #0d0d1a;
     border: 1px solid #2a2a4a;

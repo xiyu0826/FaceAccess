@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>人脸识别门禁</string>
+   <string>人脸保险柜</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_video">

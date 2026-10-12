@@ -37,7 +37,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     }
     else if (huart->Instance == USART1)
     {
-        door_uart_rx_cplt(huart);   /* 门禁命令：入队 + 继续接收 */
+        door_uart_rx_cplt(huart);   /* 开锁命令：入队 + 继续接收 */
     }
 }
 

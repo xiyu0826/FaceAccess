@@ -39,7 +39,7 @@ void servo_init(void)
     oc.OCFastMode = TIM_OCFAST_DISABLE;
     HAL_TIM_PWM_ConfigChannel(&htim_servo, &oc, SERVO_CHANNEL);
 
-    // 5. 启动 PWM，并回到关门位置 (0°)
+    // 5. 启动 PWM，并回到上锁位置 (0°)
     HAL_TIM_PWM_Start(&htim_servo, SERVO_CHANNEL);
     servo_close();
 }

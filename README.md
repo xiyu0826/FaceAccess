@@ -1,4 +1,4 @@
-# FaceAccess —— 人脸识别开锁系统
+# FaceAccess —— 人脸保险柜（STM32 + OpenCV + Qt）
 
 Qt 上位机用 OpenCV 实时识别来者身份，识别通过后经串口通知 STM32 驱动舵机开锁，
 并把每一次开锁记录写进 SQLite；STM32 侧另经 MQTT 把开锁人与环境数据上报网页看板。
@@ -45,7 +45,7 @@ Qt 上位机用 OpenCV 实时识别来者身份，识别通过后经串口通知
 │   ├── pathutil.h          # 资源路径解析（exe 同目录优先，工程目录兜底）
 │   └── style.qss           # 深色主题样式表
 ├── stm32/                  # STM32F103RCT6 固件（Keil MDK5 + HAL + FreeRTOS）
-│   ├── SYSTEM/             # 驱动层：舵机 / 门禁逻辑 / OLED / DHT11 / MQ-135 / 光敏 / PIR / DS3231 / MQTT / WiFi
+│   ├── SYSTEM/             # 驱动层：舵机 / 开锁逻辑 / OLED / DHT11 / MQ-135 / 光敏 / PIR / DS3231 / MQTT / WiFi
 │   ├── USER/
 │   │   ├── smart_home/     # 主工程：6 个 FreeRTOS 任务（src/ + keil_project/）
 │   │   ├── board_test/     # 板级自检工程

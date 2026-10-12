@@ -100,7 +100,7 @@ void MainWindow::updateFrame()
                 lastRecognizedName = bestName;
                 MyDatabase::instance()->addAccessLog(bestName, "识别成功");
                 refreshRecords();
-                serial->sendOpen(bestName);   // 串口发开门命令
+                serial->sendOpen(bestName);   // 串口发开锁命令
             }
         }
         else

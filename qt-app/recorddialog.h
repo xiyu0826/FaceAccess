@@ -5,7 +5,7 @@
 
 class QTableWidget;
 
-// 门禁记录查询窗口：独立弹出，方便查看全部记录
+// 开锁记录查询窗口：独立弹出，方便查看全部记录
 class RecordDialog : public QDialog
 {
     Q_OBJECT

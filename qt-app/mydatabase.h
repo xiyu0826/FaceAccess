@@ -24,7 +24,7 @@ public:
     bool deletePerson(int id);
     QList<Person> queryPersons();
 
-    // 门禁记录
+    // 开锁记录
     bool addAccessLog(QString name, QString result);
     QList<QStringList> queryAccessLogs();   // 每行: [id, name, result, time]
 

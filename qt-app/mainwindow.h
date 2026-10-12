@@ -25,11 +25,11 @@ public:
 private slots:
     void updateFrame();                     // 定时器槽：取帧→识别→显示
     void on_pushButton_enroll_clicked();    // 录入人员：拍照→检测→提取特征→存库
-    void on_pushButton_records_clicked();   // 门禁记录：刷新表格
+    void on_pushButton_records_clicked();   // 开锁记录：刷新表格
     void on_pushButton_open_port_clicked(); // 打开串口
 
 private:
-    void refreshRecords();                  // 查询门禁记录并刷新表格
+    void refreshRecords();                  // 查询开锁记录并刷新表格
 
     Ui::MainWindow *ui;
     QTimer *timer;

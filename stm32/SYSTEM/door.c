@@ -67,7 +67,7 @@ static void trim_line(char* line)
         line[--len] = '\0';
 }
 
-/* 最近开门的人名（供 MQTT 上报到看板） */
+/* 最近开锁的人名（供 MQTT 上报到看板） */
 static char door_last_name[32] = "";
 
 const char* door_get_last_name(void)
@@ -88,18 +88,18 @@ static void door_handle_command(char* line)
         strncpy(door_last_name, name, sizeof(door_last_name) - 1);
         door_last_name[sizeof(door_last_name) - 1] = '\0';
 
-        servo_open();                      // 舵机转 90° 开门
-        led_ctrl(LED3, LED_ON);            // 门禁用 LED3，避开报警任务用的 LED0-2
+        servo_open();                      // 舵机转 90° 开锁
+        led_ctrl(LED3, LED_ON);            // 开锁用 LED3，避开报警任务用的 LED0-2
         beep_burst(100);                   // 蜂鸣一声
 
-        vTaskDelay(pdMS_TO_TICKS(2000));   // 门开 2 秒
+        vTaskDelay(pdMS_TO_TICKS(2000));   // 开锁后保持 2 秒
 
-        servo_close();                     // 舵机回 0° 关门
+        servo_close();                     // 舵机回 0° 上锁
         led_ctrl(LED3, LED_OFF);           // 熄灭 LED3
     }
 }
 
-/* 门禁任务：轮询环形缓冲，累积字符直到换行，再解析命令 */
+/* 开锁任务：轮询环形缓冲，累积字符直到换行，再解析命令 */
 void door_task(void* arg)
 {
     (void)arg;
