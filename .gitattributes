@@ -22,3 +22,10 @@
 *.onnx  binary
 *.hex   binary
 *.bin   binary
+
+# 下面三个目录是厂商与第三方源码（ST 的 CMSIS / HAL 库、FreeRTOS），
+# 留着方便直接编译，但不算本项目的语言构成 —— 标记 vendored 让 GitHub
+# 统计时跳过，否则十几万行 C 会把 Qt 上位机的 C++ 压到看不见。
+stm32/CORE/**                 linguist-vendored
+stm32/STM32F1xx_HAL_Driver/** linguist-vendored
+stm32/FreeRTOS/**             linguist-vendored
