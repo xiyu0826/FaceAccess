@@ -1,0 +1,24 @@
+# 统一以 LF 存入仓库，避免 Windows / Linux 两端提交时出现整文件行尾差异
+* text=auto eol=lf
+
+# 源码与文档
+*.c     text diff=cpp
+*.h     text diff=cpp
+*.cpp   text diff=cpp
+*.hpp   text diff=cpp
+*.py    text
+*.md    text
+*.ui    text
+*.qss   text
+*.pro   text
+*.txt   text
+
+# 原理图为二进制资源
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.bmp   binary
+*.gif   binary
+*.onnx  binary
+*.hex   binary
+*.bin   binary

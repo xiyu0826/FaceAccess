@@ -1,0 +1,59 @@
+# ========== Qt ==========
+build/
+build-*/
+debug/
+release/
+Makefile
+Makefile.*
+*.pro.user
+*.pro.user.*
+.qmake.stash
+.qtc_clangd/
+.qtcreator/
+
+# ========== Keil MDK ==========
+# 只保留工程文件 .uvprojx，其余全是编译产物
+Objects/
+Listings/
+DebugConfig/
+*.uvguix.*
+*.uvoptx
+*.axf
+*.o
+*.d
+*.crf
+*.dep
+*.lnp
+*.idx
+*.htm
+*.map
+*.lst
+*.sct
+*.iex
+*.scvd
+*.bak
+
+# ========== Python ==========
+__pycache__/
+*.py[cod]
+.venv/
+
+# ========== 大文件与运行期生成物 ==========
+# 人脸模型从 OpenCV Model Zoo 下载，见 README
+/models/*.onnx
+# SQLite 数据库由程序首次运行时自动创建
+access.db
+
+# ========== 编辑器 / IDE ==========
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cache/
+compile_commands.json
+
+# ========== 操作系统 ==========
+.DS_Store
+Thumbs.db
+desktop.ini
