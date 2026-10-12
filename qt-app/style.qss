@@ -1,0 +1,77 @@
+/* 人脸识别门禁 —— 深色科技风主题 */
+
+QMainWindow {
+    background-color: #1a1a2e;
+}
+
+QWidget {
+    color: #e0e0e0;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+/* 摄像头画面区 */
+QLabel#label_video {
+    background-color: #0d0d1a;
+    border: 2px solid #2a2a4a;
+    border-radius: 6px;
+}
+
+/* 识别结果（突出显示） */
+QLabel#label_result {
+    background-color: #16213e;
+    border: 1px solid #2a4a6a;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4ecdc4;
+}
+
+/* 按钮 */
+QPushButton {
+    background-color: #0f3460;
+    color: #ffffff;
+    border: 1px solid #1a4a8a;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background-color: #1a4a8a;
+}
+QPushButton:pressed {
+    background-color: #0a2a4a;
+}
+QPushButton#pushButton_open_port {
+    background-color: #1a6b4a;
+    border-color: #2a8a5a;
+}
+QPushButton#pushButton_open_port:hover {
+    background-color: #228a5a;
+}
+
+/* 串口下拉框 */
+QComboBox {
+    background-color: #0d0d1a;
+    border: 1px solid #2a2a4a;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+QComboBox QAbstractItemView {
+    background-color: #16213e;
+    color: #e0e0e0;
+    selection-background-color: #1a4a8a;
+}
+
+/* 门禁记录表格 */
+QTableWidget {
+    background-color: #0d0d1a;
+    border: 1px solid #2a2a4a;
+    gridline-color: #2a2a4a;
+    color: #e0e0e0;
+}
+QHeaderView::section {
+    background-color: #16213e;
+    color: #e0e0e0;
+    border: none;
+    padding: 4px;
+}
