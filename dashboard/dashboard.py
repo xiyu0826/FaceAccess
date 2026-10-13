@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-智能家居数据看板 + 远程控制
+人脸保险柜数据看板 + 远程控制
 1. 订阅 broker.emqx.io 的 smart_home/test (STM32 发的数据)
 2. 网页显示数据 + 报警状态
 3. 网页按钮 -> 发布指令到 smart_home/cmd (控制 STM32)
@@ -74,7 +74,7 @@ HTML = """
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
-<title>智能家居监控</title>
+<title>人脸保险柜监控</title>
 <style>
   body { font-family: Arial, sans-serif; background:#1a1a2e; color:#eee;
          display:flex; flex-direction:column; align-items:center; padding:20px; }
@@ -100,7 +100,7 @@ HTML = """
 </style>
 </head>
 <body>
-<h1>🏠 智能家居环境监控 <small style="font-size:14px;color:#888;">v7</small></h1>
+<h1>🔒 人脸保险柜状态监控 <small style="font-size:14px;color:#888;">v7</small></h1>
 <div style="color:#888; font-size:12px; margin-bottom:8px;">最后更新: <span id="updated">-</span></div>
 <div class="grid">
   <div class="card"><div class="label">温度</div><div class="value temp">{{ temp }}°C</div></div>
